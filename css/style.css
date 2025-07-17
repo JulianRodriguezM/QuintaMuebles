@@ -266,6 +266,14 @@ ul li a:hover {
   display: none;
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
 .modal-content {
   background: #fff;
   width: 80%;
@@ -282,6 +290,22 @@ ul li a:hover {
   right: 20px;
   font-size: 24px;
   cursor: pointer;
+}
+
+
+.boton-pdf {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.boton-pdf:hover {
+  background-color: #444;
 }
 
 /* #endregion */

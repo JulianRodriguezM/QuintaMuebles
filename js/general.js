@@ -21,3 +21,9 @@ fetch('footer.html') // Ajusta la ruta si es necesario
     document.getElementById('footer').innerHTML = html;
   });
 
+
+fetch('modal.html') // Ajusta la ruta si es necesario
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('modal').innerHTML = html;
+  });
