@@ -1,3 +1,79 @@
+/* #region NAVBAR*/
+.nav-links a.active {
+  font-weight: bold;
+  color: #d18028; /* o el color que desees resaltar */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-nav {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.brand h1 {
+  margin: 0;
+  color: #a16c43;
+  font-size: 24px;
+}
+
+.brand span {
+  font-size: 14px;
+  color: #666;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d18028;
+}
+
+.btn-cotizar {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-cotizar:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+
+/* #endregion */
+
+/* #region PIE DE PAGINA */
 footer {
   background-color: #4d4036; /* Color similar al fondo del ejemplo */
   color: white;
@@ -170,6 +246,8 @@ ul li a:hover {
   vertical-align: middle; /* Alinea verticalmente con el texto */
   margin-right: 5px; /* Espacio entre ícono e texto */
 }
+/* #endregion */
+
 
 
 
