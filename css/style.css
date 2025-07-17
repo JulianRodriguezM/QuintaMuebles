@@ -248,6 +248,107 @@ ul li a:hover {
 }
 /* #endregion */
 
+/* #region MODAL*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
 
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region NOSOTROS */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url('../img/proyectos/COCINA.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Capa difuminada por encima */
+ .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.4) 0%,     /* semitransparente negro en el borde izquierdo */
+    rgba(0, 0, 0, 0) 10%,      /* totalmente transparente al llegar al centro */
+    rgba(0, 0, 0, 0) 90%,      /* sigue transparente hasta casi el borde derecho */
+    rgba(0, 0, 0, 0.4) 100%    /* semitransparente negro en el borde derecho */
+  );
+  z-index: 1;
+} 
+
+/* El contenido debe estar por encima del degradado */
+.hero-section .overlay {
+  position: relative;
+  z-index: 2; /* Asegura que el texto quede por encima */
+  background-color: rgba(0, 0, 0, 0.4); /* Misma transparencia que los bordes */
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero-section a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* #endregion */
 
 
