@@ -15,3 +15,9 @@ fetch('nav.html')
   })
   .catch(err => console.error("Error cargando navbar:", err)); // 👈 Esto te mostrará si falla
 
+fetch('footer.html') // Ajusta la ruta si es necesario
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+  });
+
