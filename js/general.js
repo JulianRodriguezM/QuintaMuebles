@@ -52,4 +52,40 @@ function moverCarrusel(button, direction) {
   });
 }
 
+let desplazamiento = 0;
+
+function moverCarruselImagenes(direccion) {
+  const carrusel = document.querySelector('.carrusel-imagenes');
+  const imagen = carrusel.querySelector('img');
+  const ancho = imagen.offsetWidth + 20; // imagen + gap
+  const total = carrusel.scrollWidth;
+  const visible = carrusel.offsetWidth;
+
+  desplazamiento += direccion * ancho;
+
+  // Limita el desplazamiento
+  desplazamiento = Math.max(0, Math.min(desplazamiento, total - visible));
+
+  carrusel.scrollTo({
+    left: desplazamiento,
+    behavior: 'smooth'
+  });
+}
+
+function abrirModalIdeas() {
+  document.getElementById('modal-ideas').style.display = 'flex';
+}
+
+function cerrarModalIdeas() {
+  document.getElementById('modal-ideas').style.display = 'none';
+}
+
+// También cerramos si se hace clic fuera del modal
+window.addEventListener('click', function (e) {
+  const modal = document.getElementById('modal-ideas');
+  if (e.target === modal) {
+    cerrarModalIdeas();
+  }
+});
+
 

@@ -11,6 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="../js/general.js"></script>
   <script src="../js/modal.js"></script>
+  <script src="../js/counter.js"></script>
+  <script src="../js/reseñas.js"></script>
 </head>
 <body>
   <div id="navbar-container"></div>
@@ -52,10 +54,144 @@
   </div>
 </section>
 
+<section class="mini-estadisticas">
+  <div class="contenedor-estadisticas">
+    <div class="imagen-estadistica">
+      <img src="../img/general/COCINA.jpeg" alt="Imagen aérea del proyecto">
+    </div>
+    <div class="numeros-estadistica">
+      <div class="numero">
+        <span class="counter-number" data-target="20">0+</span>
+        <p>Proyectos Completados</p>
+      </div>
+      <div class="linea-divisoria"></div>
+      <div class="numero">
+        <span class="counter-number" data-target="98">0%</span>
+        <p>Comentarios Positivos</p>
+      </div>
+      <div class="boton-estadisticas">
+        <a href="proyectos.html" class="btn-negro">VER PROYECTOS</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features-services-alt-section">
+        <div class="container">
+              <div class="features-grid-alt">
+                <div class="feature-item-alt">
+                    <div class="feature-icon-alt">
+                        <i class="fas fa-hammer"></i> </div>
+                    <h3 class="feature-title-alt">Producción Artesanal</h3>
+                    <p class="feature-description-alt">Cada mueble es cuidadosamente elaborado por manos expertas, garantizando calidad y atención al detalle en cada etapa.</p>
+                </div>
+                <div class="feature-item-alt">
+                    <div class="feature-icon-alt">
+                        <i class="fas fa-brush"></i> </div>
+                    <h3 class="feature-title-alt">Acabados Exclusivos</h3>
+                    <p class="feature-description-alt">Ofrecemos una amplia gama de acabados y tratamientos para la madera, personalizando el estilo de tus muebles.</p>
+                </div>
+                <div class="feature-item-alt">
+                    <div class="feature-icon-alt">
+                        <i class="fas fa-ruler-combined"></i> </div>
+                    <h3 class="feature-title-alt">Muebles a Medida</h3>
+                    <p class="feature-description-alt">Diseñamos y fabricamos piezas que se adaptan perfectamente a las dimensiones y estética de tu hogar u oficina.</p>
+                </div>
+                <div class="feature-item-alt">
+                    <div class="feature-icon-alt">
+                        <i class="fas fa-seedling"></i> </div>
+                    <h3 class="feature-title-alt">Materiales Sostenibles</h3>
+                    <p class="feature-description-alt">Comprometidos con el medio ambiente, utilizamos madera de fuentes responsables y procesos ecológicos.</p>
+                </div>
+            </div>
+        </div>
+  </section>
+<section class="carrusel-trabajos">
+  <h2>Más de Nuestro Trabajo</h2>
+  <div class="carrusel-contenedor">
+    <button class="carrusel-btn prev" onclick="moverCarruselImagenes(-1)">‹</button>
+    <div class="carrusel-imagenes">
+      <img src="../img/proyectos/trabajo1.jpg" alt="Trabajo 1">
+      <img src="../img/proyectos/trabajo2.jpg" alt="Trabajo 2">
+      <img src="../img/proyectos/trabajo3.jpg" alt="Trabajo 3">
+      <img src="../img/proyectos/trabajo4.jpg" alt="Trabajo 4">
+      <img src="../img/proyectos/trabajo5.jpg" alt="Trabajo 5">
+    </div>
+    <button class="carrusel-btn next" onclick="moverCarruselImagenes(1)">›</button>
+  </div>
+</section>
+
+<section class="seccion-categorias">
+  <div class="contenido-categorias">
+    <div class="imagen-categorias">
+      <img src="../img/proyectos/hogar-empresa.jpg" alt="Muebles Hogar y Empresa">
+    </div>
+    <div class="info-categorias">
+      <p class="subtitulo">NUESTROS PROYECTOS</p>
+      <h2>Soluciones para Hogar y Empresa</h2>
+
+      <div class="categoria">
+        <div class="icono">🏠</div>
+        <div>
+          <h4>Hogar</h4>
+          <p>Mobiliario personalizado para dormitorios, salas, comedores y cocinas, con acabados cálidos y funcionales.</p>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <div class="icono">🏢</div>
+        <div>
+          <h4>Empresa</h4>
+          <p>Diseños funcionales para oficinas, recepciones, salas de juntas y estaciones de trabajo que optimizan tus espacios.</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn-negro" onclick="abrirModalIdeas()">VER IDEAS</a>
+    </div>
+  </div>
+</section>
+
+<div id="modal-ideas" class="modal-ideas">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalIdeas()">&times;</span>
+    <h3>Descarga nuestro catálogo de ideas</h3>
+    <p>Inspírate con nuestras propuestas para hogar y empresa.</p>
+    <a href="../css/pdf/catalogo-ideas.pdf" class="btn-negro" download>Descargar PDF</a>
+  </div>
+</div>
 
 
   <div id="modal"></div>
   <div id="whatsapp"></div>
+  <div id="contact"></div>
+
+  <section class="seccion-reseñas">
+  <div class="reseñas-header">
+    <h2>Lo que Dicen Nuestros Clientes</h2>
+    <div class="rating-container">
+      <div class="estrellas header-stars"></div>
+      <div class="rating">4.8/5.0 <span class="rating-count">(40 reseñas)</span></div>
+    </div>
+  </div>
+
+  <div class="carrusel-reseñas">
+    <button class="btn-carrusel" onclick="cambiarReseña(-1)">‹</button>
+
+    <div class="contenedor-reseña-activa"></div>
+
+    <button class="btn-carrusel" onclick="cambiarReseña(1)">›</button>
+  </div>
+
+  <div class="puntos-reseñas"></div>
+
+  <div class="reseña-form-btn">
+    <a href="https://forms.gle/8dwpCWGMD1tiVGNk7" target="_blank" class="btn-negro">
+      DEJA TU RESEÑA
+    </a>
+  </div>
+</section>
+
+
 </body>
 
 <footer>

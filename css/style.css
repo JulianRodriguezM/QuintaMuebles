@@ -485,6 +485,457 @@ ul li a:hover {
   }
 }
 
+/* estadistica */
+
+.mini-estadisticas {
+  padding: 80px 40px;
+  background-color: #f9f9f9;
+}
+
+.contenedor-estadisticas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imagen-estadistica {
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.imagen-estadistica img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.numeros-estadistica {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.numero {
+  text-align: center;
+}
+
+.counter-number {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.numero p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.linea-divisoria {
+  width: 2px;
+  height: 50px;
+  background-color: #bbb;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-estadisticas {
+    flex-direction: column;
+    text-align: center;
+  }
+  .linea-divisoria {
+    display: none;
+  }
+}
+
+/* carrucel */
+.carrusel-trabajos {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.carrusel-trabajos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.carrusel-contenedor {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 20px;
+}
+
+.carrusel-imagenes img {
+  flex: 0 0 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carrusel-btn.prev {
+  left: 0;
+}
+
+.carrusel-btn.next {
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .carrusel-imagenes img {
+    flex: 0 0 240px;
+    height: 160px;
+  }
+}
+
+/* categorias */
+.seccion-categorias {
+  padding: 80px 40px;
+  background-color: #fff;
+}
+
+.contenido-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imagen-categorias {
+  flex: 1 1 45%;
+}
+
+.imagen-categorias img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info-categorias {
+  flex: 1 1 45%;
+}
+
+.info-categorias .subtitulo {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #a56a3f;
+  margin-bottom: 10px;
+}
+
+.info-categorias h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+
+.categoria {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.categoria .icono {
+  font-size: 1.8rem;
+  color: #a56a3f;
+  line-height: 1.2;
+}
+
+.categoria h4 {
+  font-size: 1.2rem;
+  margin: 0 0 5px;
+}
+
+.categoria p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-negro {
+  background-color: #1c1c1c;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn-negro:hover {
+  background-color: #a56a3f;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .contenido-categorias {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .categoria {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .btn-negro {
+    margin-top: 20px;
+  }
+}
+
+
+/* modal ideas */
+.modal-ideas {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-contenido h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.modal-contenido p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.modal-contenido .btn-negro {
+  display: inline-block;
+  padding: 10px 24px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* reseñas */
+.reseñas-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seccion-reseñas h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 700;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.estrellas.header-stars {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 2px;
+}
+
+.estrellas.header-stars .estrella {
+  display: inline-block;
+}
+
+.estrellas.header-stars .full {
+  color: gold;
+}
+
+.estrellas.header-stars .half {
+  color: gold;
+  position: relative;
+  overflow: hidden;
+  width: 0.5em;
+}
+
+.estrellas.header-stars .half::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: gold;
+}
+
+.estrellas.header-stars .empty {
+  color: #ccc;
+}
+
+.rating {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.rating .rating-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.seccion-reseñas {
+  padding: 80px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.carrusel-reseñas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contenedor-reseña-activa {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.reseña {
+  padding: 25px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  min-height: 200px;
+  display: none;
+  text-align: center;
+}
+
+.reseña.activa {
+  display: block;
+}
+
+.reseña .comentario {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.reseña .cliente {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.btn-carrusel {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.btn-carrusel:hover {
+  color: #a56a3f;
+}
+
+.puntos-reseñas {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.punto {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.punto.activo {
+  background-color: #a56a3f;
+}
+
+.estrellas {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+.estrellas .estrella {
+  color: #ccc;
+}
+
+.estrellas .estrella.llena {
+  color: gold;
+}
+
+.estrellas .estrella.media {
+  background: linear-gradient(90deg, gold 50%, #ccc 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reseña-form-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
 
 /* #endregion */
 
