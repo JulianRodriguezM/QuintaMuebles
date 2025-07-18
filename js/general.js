@@ -34,3 +34,22 @@ fetch('whatsapp.html') // Ajusta la ruta si es necesario
     document.getElementById('whatsapp').innerHTML = html;
   });
 
+fetch('formulariocontact.html') // Ajusta la ruta si es necesario
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('contact').innerHTML = html;
+  });
+
+function moverCarrusel(button, direction) {
+  const carousel = button.closest('.carousel');
+  const container = carousel.querySelector('.carousel-images');
+  const width = carousel.clientWidth;
+  let scrollLeft = container.scrollLeft;
+
+  container.scrollTo({
+    left: scrollLeft + direction * width,
+    behavior: 'smooth'
+  });
+}
+
+

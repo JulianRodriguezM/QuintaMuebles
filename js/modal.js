@@ -8,7 +8,7 @@ function abrirModal(ruta) {
       // Activar botón de descarga PDF
       document.getElementById('descargar-pdf').onclick = function () {
         const contenido = document.getElementById('modal-body');
-        const nombre = ruta.includes("aviso") ? "Aviso_Legal.pdf" : "Politica_Privacidad.pdf";
+        const nombre = ruta.includes("aviso") ? "Legal.pdf" : (ruta.includes("politica") ? "Privacidad.pdf" : "Terminos.pdf");
 
         html2pdf().set({
           margin: 10,
