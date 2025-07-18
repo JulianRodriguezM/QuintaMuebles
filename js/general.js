@@ -27,3 +27,10 @@ fetch('modal.html') // Ajusta la ruta si es necesario
   .then(html => {
     document.getElementById('modal').innerHTML = html;
   });
+
+fetch('whatsapp.html') // Ajusta la ruta si es necesario
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('whatsapp').innerHTML = html;
+  });
+

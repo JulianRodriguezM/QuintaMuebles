@@ -876,3 +876,41 @@ ul li a:hover {
     }
 }
 /* #endregion */
+
+/* #region WHASTAPP*/
+.whatsapp-float {
+    position: fixed; /* Makes the button stay in place as you scroll */
+    width: 60px; /* Width of the circular button */
+    height: 60px; /* Height of the circular button */
+    bottom: 40px; /* Distance from the bottom of the viewport */
+    right: 40px; /* Distance from the right of the viewport */
+    background-color: #25d366; /* WhatsApp green color */
+    color: #FFF; /* White icon color */
+    border-radius: 50px; /* Makes it perfectly circular */
+    text-align: center;
+    font-size: 30px; /* Size of the WhatsApp icon */
+    box-shadow: 2px 2px 3px #999; /* Subtle shadow */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    display: flex; /* Use flexbox to center the icon */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.whatsapp-float:hover {
+    background-color: #1DA851; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive adjustments for the WhatsApp button */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+/* #endregion */
