@@ -372,6 +372,354 @@ ul li a:hover {
   text-decoration: underline;
 }
 
+/* cuerpo */
+
+.about-us-content {
+    padding: 60px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.about-us-content .container {
+    max-width: 1000px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.about-us-content .section-subtitle {
+    font-size: 1.1em;
+    color: #e09145; /* Orange color from the image */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Or your preferred font */
+}
+
+.about-us-content .section-title {
+    font-size: 2.5em; /* Adjust font size as needed */
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif; /* Or your preferred font */
+}
+
+.about-us-content .text-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between columns */
+    text-align: left; /* Align text within columns to the left */
+}
+
+.about-us-content .column {
+    flex: 1; /* Allows columns to take equal space */
+}
+
+.about-us-content .column p {
+    font-size: 1.0em; /* Adjust font size as needed */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-us-content .text-columns {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        gap: 0; /* Remove gap when stacked */
+    }
+}
+
+/* datos numericos */
+
+.counter-section {
+    padding: 80px 0; /* Adjust padding as needed */
+    background-color: #f8f8f8; /* Light background for contrast */
+    text-align: center;
+}
+
+.counter-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.counter-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 40px; /* Space between items */
+}
+
+.counter-item {
+    flex: 1; /* Allow items to take equal space */
+    min-width: 200px; /* Minimum width for each item before wrapping */
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Vertical line like in the image */
+}
+
+/* Remove border from the last item */
+.counter-item:last-child {
+    border-right: none;
+}
+
+.counter-number {
+    font-size: 3.5em; /* Large number size */
+    font-weight: 600;
+    color: #4e4e4e; /* Darker color for numbers */
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Or your preferred font */
+}
+
+.counter-text {
+    font-size: 1.1em;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .counter-item {
+        min-width: 45%; /* Two items per row on medium screens */
+        border-right: none; /* Remove vertical line for stacked items */
+        border-bottom: 1px solid #ddd; /* Add horizontal line */
+        padding-bottom: 40px;
+    }
+    .counter-item:nth-child(even) { /* Remove bottom border for second item in row */
+        border-right: none;
+    }
+    .counter-item:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .counter-item {
+        min-width: 100%; /* One item per row on small screens */
+        border-bottom: 1px solid #ddd; /* Add horizontal line */
+        border-right: none;
+    }
+    .counter-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Equipo*/
+.team-section {
+    padding: 80px 0;
+    background-color: #fff; /* White background */
+    text-align: center;
+}
+
+.team-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-title {
+    margin-bottom: 50px; /* Space below the section title */
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between cards */
+}
+
+.team-member-card {
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 60px); /* Approx 3 cards per row, accounting for gap */
+    max-width: 350px; /* Max width for individual cards */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.team-member-photo {
+    width: 120px; /* Size of the circular photo */
+    height: 120px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    margin: 0 auto 20px auto; /* Center and add space below */
+    border: 3px solid #e09145; /* Orange border around the photo */
+    box-shadow: 0 0 0 5px rgba(224, 145, 69, 0.2); /* Subtle glow effect */
+}
+
+.team-member-name {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.team-member-position {
+    font-size: 1.1em;
+    color: #e09145; /* Orange color for position */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.team-member-role {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.team-member-experience {
+    font-size: 0.9em;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.team-member-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for team section */
+@media (max-width: 992px) {
+    .team-member-card {
+        flex: 1 1 calc(50% - 30px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member-card {
+        flex: 1 1 100%; /* One card per row on small screens */
+        max-width: 400px; /* Limit width of single card on very small screens */
+    }
+}
+/* Servicios */
+
+.features-services-alt-section {
+    padding: 80px 0;
+    background-color: #f0ede9; /* Light beige/off-white background from the image */
+    text-align: center;
+    /* You can add a subtle background image here if desired, like the palm leaf */
+    /* background-image: url('../img/palm-leaf-bg.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-position: right center; */
+    /* background-size: 20%; Adjust as needed */
+}
+
+.features-services-alt-section .container {
+    max-width: 100%; /* Allow container to take full width of its parent */
+    width: 100%; /* Ensure it explicitly takes 100% */
+    margin: 0 auto;
+    padding: 0; /* Remove padding if you want items to touch edges of browser */
+}
+
+.features-grid-alt {
+    display: flex;
+    justify-content: center; /* Center items */
+    flex-wrap: wrap;
+    gap: 0; /* No gap between items for the vertical separators */
+    width: 100%; /* Ensure the grid itself takes full width */
+}
+
+.feature-item-alt {
+    flex: 1 1 25%; /* flex-grow, flex-shrink, flex-basis. Allows 4 items per row */
+    /* max-width: 25%; */ /* This is effectively handled by flex-basis now */
+    padding: 40px 25px; /* Adjust padding inside each item */
+    text-align: center;
+    border-right: 1px solid #d3cdc5; /* Vertical separator line */
+    background-color: transparent; /* Ensure transparent background */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Remove border from the last item in the row */
+.feature-item-alt:nth-child(4n) { /* Apply to every 4th item */
+    border-right: none;
+}
+/* Ensure no border on the very last item if total items is not a multiple of 4 */
+.feature-item-alt:last-child {
+    border-right: none;
+}
+
+
+.feature-icon-alt {
+    font-size: 3.5em; /* Larger icon size */
+    color: #4e4e4e; /* Darker gray for icons */
+    margin-bottom: 20px;
+}
+
+.feature-title-alt {
+    font-size: 1.4em; /* Adjust font size */
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif; /* Consistent font */
+    font-weight: 600; /* Slightly bolder */
+}
+
+.feature-description-alt {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .feature-item-alt {
+        flex: 1 1 50%; /* Two items per row on medium-large screens */
+        border-right: 1px solid #d3cdc5;
+        border-bottom: 1px solid #d3cdc5; /* Add horizontal separator */
+    }
+    .feature-item-alt:nth-child(2n) { /* Remove border for every second item in this layout */
+        border-right: none;
+    }
+    /* Ensure bottom border for items that are not the last row */
+    .feature-item-alt:nth-last-child(odd):nth-child(odd),
+    .feature-item-alt:nth-last-child(even):nth-child(even) {
+        border-bottom: 1px solid #d3cdc5;
+    }
+    /* Clear border for the actual last two items */
+    .feature-item-alt:nth-last-child(1),
+    .feature-item-alt:nth-last-child(2) { /* Remove bottom border for last two items */
+        border-bottom: none;
+    }
+    /* Special case if there's an odd number of items and it's the last one */
+    .features-grid-alt.odd-items .feature-item-alt:last-child {
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid-alt {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+    .feature-item-alt {
+        flex: 1 1 100%; /* Full width for stacked items */
+        border-right: none; /* Remove vertical border when stacked */
+        border-bottom: 1px solid #d3cdc5; /* Only horizontal border */
+    }
+    .feature-item-alt:last-child {
+        border-bottom: none; /* No bottom border for the very last item */
+    }
+}
+
 
 /* #endregion */
 
