@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="../js/reseñas.js"></script>
   <script src="../js/general.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/counter.js"></script>
-  <script src="../js/reseñas.js"></script>
+  
 </head>
 <body>
   <div id="navbar-container"></div>
@@ -111,11 +112,11 @@
   <div class="carrusel-contenedor">
     <button class="carrusel-btn prev" onclick="moverCarruselImagenes(-1)">‹</button>
     <div class="carrusel-imagenes">
-      <img src="../img/proyectos/trabajo1.jpg" alt="Trabajo 1">
-      <img src="../img/proyectos/trabajo2.jpg" alt="Trabajo 2">
-      <img src="../img/proyectos/trabajo3.jpg" alt="Trabajo 3">
-      <img src="../img/proyectos/trabajo4.jpg" alt="Trabajo 4">
-      <img src="../img/proyectos/trabajo5.jpg" alt="Trabajo 5">
+      <img src="../img/general/nosotros.jpeg" alt="Trabajo 1">
+      <img src="../img/proyectos/Empresa/2.jpeg" alt="Trabajo 2">
+      <img src="../img/proyectos/casa/1.jpeg" alt="Trabajo 3">
+      <img src="../img/proyectos/casa/3.jpeg" alt="Trabajo 4">
+      <img src="../img/proyectos/casa/2.jpeg" alt="Trabajo 5">
     </div>
     <button class="carrusel-btn next" onclick="moverCarruselImagenes(1)">›</button>
   </div>
@@ -124,7 +125,7 @@
 <section class="seccion-categorias">
   <div class="contenido-categorias">
     <div class="imagen-categorias">
-      <img src="../img/proyectos/hogar-empresa.jpg" alt="Muebles Hogar y Empresa">
+      <img src="../img/proyectos/casa/2.jpeg" alt="Muebles Hogar y Empresa">
     </div>
     <div class="info-categorias">
       <p class="subtitulo">NUESTROS PROYECTOS</p>
@@ -165,20 +166,18 @@
   <div id="whatsapp"></div>
   <div id="contact"></div>
 
-  <section class="seccion-reseñas">
+<section class="seccion-reseñas">
   <div class="reseñas-header">
     <h2>Lo que Dicen Nuestros Clientes</h2>
     <div class="rating-container">
       <div class="estrellas header-stars"></div>
-      <div class="rating">4.8/5.0 <span class="rating-count">(40 reseñas)</span></div>
+      <div class="rating"></div> <!-- se llena por JS -->
     </div>
   </div>
 
   <div class="carrusel-reseñas">
     <button class="btn-carrusel" onclick="cambiarReseña(-1)">‹</button>
-
     <div class="contenedor-reseña-activa"></div>
-
     <button class="btn-carrusel" onclick="cambiarReseña(1)">›</button>
   </div>
 
@@ -190,6 +189,7 @@
     </a>
   </div>
 </section>
+
 
 
 </body>

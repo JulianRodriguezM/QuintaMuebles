@@ -1598,7 +1598,8 @@ ul li a:hover {
 
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .carousel-images img {

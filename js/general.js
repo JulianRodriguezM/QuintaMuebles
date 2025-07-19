@@ -43,14 +43,16 @@ fetch('formulariocontact.html') // Ajusta la ruta si es necesario
 function moverCarrusel(button, direction) {
   const carousel = button.closest('.carousel');
   const container = carousel.querySelector('.carousel-images');
-  const width = carousel.clientWidth;
-  let scrollLeft = container.scrollLeft;
 
-  container.scrollTo({
-    left: scrollLeft + direction * width,
+  const imagen = container.querySelector('img');
+  const width = imagen.offsetWidth + 10; // Ancho de imagen + margen o padding
+
+  container.scrollBy({
+    left: direction * width,
     behavior: 'smooth'
   });
 }
+
 
 let desplazamiento = 0;
 
