@@ -37,11 +37,18 @@
                 if ($result->num_rows > 0) {
                     // Recorrer los resultados y mostrarlos
                     while($item = $result->fetch_assoc()) {
+                        $precioNumerico = (float)$item['precio_info'];
                         echo '<div class="furniture-item ' . htmlspecialchars($item['categoria']) . '">';
                         echo '<img src="' . htmlspecialchars($item['imagen_url']) . '" alt="' . htmlspecialchars($item['nombre']) . '">';
                         echo '<h3>' . htmlspecialchars($item['nombre']) . '</h3>';
                         echo '<p>' . htmlspecialchars($item['descripcion']) . '</p>';
-                        echo '<div class="price">' . htmlspecialchars($item['precio_info']) . '</div>';
+                        if (is_numeric($item['precio_info'])) { // Verifica si el valor es numérico antes de formatear
+                            $precioFormateado = number_format($precioNumerico, 2, ',', '.'); // 2 decimales, coma para decimal, punto para miles
+                            echo '<div class="price">$ ' . htmlspecialchars($precioFormateado) . '</div>';
+                        } else {
+                            // Si no es un número (ej. "Consultar precio"), mostrarlo como está
+                            echo '<div class="price">' . htmlspecialchars($item['precio_info']) . '</div>';
+                        }
                         echo '<a href="#" class="btn-more-info" data-name="' . htmlspecialchars($item['nombre']) . '">Solicitar Cotización</a>';
                         echo '</div>';
                     }
