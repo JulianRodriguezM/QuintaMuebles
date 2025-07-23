@@ -1675,3 +1675,190 @@ ul li a:hover {
 
 
 /* #endregion */
+
+/* region OFICINA */
+.office-furniture-section {
+    padding: 60px 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Light background for the section */
+    text-align: center;
+}
+
+.office-furniture-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.office-furniture-section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Filters and Search Bar Styling */
+.filters-and-search {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between elements */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.filters-and-search input[type="text"],
+.filters-and-search select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease;
+    width: 250px; /* Fixed width for inputs */
+    max-width: 100%; /* Ensure responsiveness */
+}
+
+.filters-and-search input[type="text"]:focus,
+.filters-and-search select:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Furniture Grid Layout */
+.furniture-grid {
+    display: grid; /* Use CSS Grid for the layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between grid items */
+    max-width: 1200px; /* Limit grid width */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 15px; /* Add some padding on the sides */
+}
+
+/* Individual Furniture Item Styling */
+.furniture-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox for content within the item */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push button to the bottom */
+}
+
+.furniture-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.furniture-item img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for images to ensure consistency */
+    object-fit: contain; /* Ensure images fit without cropping, maintaining aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.furniture-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    min-height: 40px; /* Ensure consistent height for titles */
+}
+
+.furniture-item p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1; /* Allows description to take up available space */
+}
+
+.furniture-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff; /* Accent color for price */
+    margin-bottom: 15px;
+}
+
+.furniture-item .btn-more-info {
+    display: inline-block;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Push button to the bottom */
+}
+
+.furniture-item .btn-more-info:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments using Media Queries */
+@media (max-width: 768px) {
+    .office-furniture-section {
+        padding: 40px 15px;
+    }
+
+    .office-furniture-section h2 {
+        font-size: 2em;
+    }
+
+    .filters-and-search {
+        flex-direction: column; /* Stack filters vertically on small screens */
+        align-items: center; /* Center them */
+    }
+
+    .filters-and-search input[type="text"],
+    .filters-and-search select {
+        width: 80%; /* Make inputs wider on small screens */
+        margin-bottom: 10px;
+    }
+
+    .furniture-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust min-width for smaller screens */
+        gap: 20px;
+    }
+
+    .furniture-item {
+        padding: 15px;
+    }
+
+    .furniture-item img {
+        height: 180px;
+    }
+
+    .furniture-item h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .office-furniture-section h2 {
+        font-size: 1.8em;
+    }
+
+    .office-furniture-section p {
+        font-size: 1em;
+    }
+
+    .filters-and-search input[type="text"],
+    .filters-and-search select {
+        width: 95%; /* Even wider on very small screens */
+    }
+
+    .furniture-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+/* #endregion */

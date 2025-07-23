@@ -11,6 +11,7 @@
     </div>
      <div class="contact-form">
         <form action="https://formspree.io/f/mgvzvnvn" method="POST" id="contact-form"> 
+            <input type="text" id="productInterest" name="product_interest" readonly>
             
             <div class="form-row">
                 <input type="text" name="Nombre" placeholder="Nombre" required>
@@ -25,7 +26,7 @@
                 <input type="checkbox" id="promotions" name="Acepta_Promociones" value="Sí">
                 <label for="promotions">Acepto recibir información y promociones por correo electrónico*</label>
             </div>
-            <button type="submit">ENVIAR MENSAJE</button>
+            <button type="submit">COTIZAR</button>
         </form>
     </div>
 </section>
