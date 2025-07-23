@@ -41,7 +41,7 @@
 </div>
   <div class="legal">
         <div class="legal_info">
-            © 2025 Quinta Muebles
+            © 2025 Quinta Muebles, - NIT 
             <br>
             Sitio web desarrollado por <a href="https://github.com/JulianRodriguezM" target="_blank">Julian Rodriguez
         </div>

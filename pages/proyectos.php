@@ -5,7 +5,7 @@
     <section class="hero-section">
     <div class="overlay">
         <h1>Proyectos QuintaMuebles</h1>
-        <p><a href="index.html">INICIO</a> › NUESTROS PROYECTOS</p>
+        <p><a href="../index.php">INICIO</a> › NUESTROS PROYECTOS</p>
     </div>
     </section>
 
