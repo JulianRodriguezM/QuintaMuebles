@@ -1676,7 +1676,21 @@ ul li a:hover {
 
 /* #endregion */
 
-/* region OFICINA */
+/* #region OFICINA */
+.modal-contact{
+  display: none; /* ESTO ES CRUCIAL: Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    display: flex; /* Nota: si tienes 'display: flex;' aquí, el 'display: none;' debe ir antes y ser más específico o tener !important */
+    align-items: center;
+    justify-content: center;
+}
 .office-furniture-section {
     padding: 60px 20px; /* Adjust padding as needed */
     background-color: #f9f9f9; /* Light background for the section */
@@ -1861,4 +1875,28 @@ ul li a:hover {
     }
 }
 
+/* #endregion */
+
+/* #region HOGAR */
+.home-furniture-section {
+    padding: 60px 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Light background for the section */
+    text-align: center;
+}
+
+.home-furniture-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-furniture-section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
 /* #endregion */

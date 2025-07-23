@@ -16,9 +16,11 @@
   <script src="assets/js/modal.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/filtro-oficina.js"></script>
+  <script src="assets/js/filtro-hogar.js"></script>
   <script src="../assets/js/reseñas.js"></script>
   <script src="../assets/js/general.js"></script>
   <script src="../assets/js/modal.js"></script>
   <script src="../assets/js/counter.js"></script>
   <script src="../assets/js/filtro-oficina.js"></script>
+  <script src="../assets/js/filtro-hogar.js"></script>
 </head>

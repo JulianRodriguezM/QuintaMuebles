@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lógica para el modal (asegúrate de que esta parte esté definida)
     const contactModal = document.getElementById('contactModal'); // Asumiendo que tu modal tiene este ID
     const closeButton = document.querySelector('#contactModal .close-button'); // Botón de cerrar dentro del modal
-
+    
+    if (contactModal) {
+        contactModal.style.display = 'none'; // Asegura que el modal esté oculto al cargar
+    }
     // Función para abrir el modal
     function openModal() {
         if (contactModal) {
