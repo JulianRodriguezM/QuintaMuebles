@@ -22,56 +22,35 @@
                     <option value="chairs">Sillas</option>
                     <option value="storage">Almacenamiento</option>
                     <option value="tables">Mesas de Reunión</option>
-                    </select>
-                </div>
+                </select>
+            </div>
 
             <div class="furniture-grid">
                 <?php
-                // This is where you would dynamically load furniture data.
-                // For now, I'll put some static examples.
-                // In a real application, you'd fetch this from a database.
+                // Incluir el archivo de conexión a la base de datos
+                include('../includes/db_conn.php');
 
-                $office_furniture = [
-                    [
-                        'name' => 'Escritorio Moderno Ergonómico',
-                        'image' => '../assets/images/escritorio-moderno.jpg', // Placeholder image path
-                        'description' => 'Escritorio con altura ajustable y superficie amplia, ideal para productividad y confort.',
-                        'category' => 'desks',
-                        'price_info' => 'Consultar precio' // Or actual price if applicable
-                    ],
-                    [
-                        'name' => 'Silla Ejecutiva de Cuero Premium',
-                        'image' => '../assets/images/silla-ejecutiva.jpg', // Placeholder image path
-                        'description' => 'Silla ergonómica con soporte lumbar avanzado y tapicería de cuero de alta calidad.',
-                        'category' => 'chairs',
-                        'price_info' => 'Consultar precio'
-                    ],
-                    [
-                        'name' => 'Archivador Metálico de 4 Cajones',
-                        'image' => '../assets/images/archivador.jpg', // Placeholder image path
-                        'description' => 'Solución de almacenamiento segura y duradera para tus documentos importantes.',
-                        'category' => 'storage',
-                        'price_info' => 'Consultar precio'
-                    ],
-                    [
-                        'name' => 'Mesa de Conferencia Ovalada',
-                        'image' => '../assets/images/mesa-conferencia.jpg', // Placeholder image path
-                        'description' => 'Mesa espaciosa para reuniones, con acabado elegante y duradero.',
-                        'category' => 'tables',
-                        'price_info' => 'Consultar precio'
-                    ]
-                    // Add more furniture items here
-                ];
+                // Consulta para obtener productos de OFICINA
+                $sql = "SELECT nombre, descripcion, imagen_url, categoria, precio_info FROM productos WHERE tipo = 'oficina'";
+                $result = $conn->query($sql);
 
-                foreach ($office_furniture as $item) {
-                    echo '<div class="furniture-item ' . htmlspecialchars($item['category']) . '">';
-                    echo '<img src="' . htmlspecialchars($item['image']) . '" alt="' . htmlspecialchars($item['name']) . '">';
-                    echo '<h3>' . htmlspecialchars($item['name']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($item['description']) . '</p>';
-                    echo '<div class="price">' . htmlspecialchars($item['price_info']) . '</div>';
-                    echo '<a href="#" class="btn-more-info" data-name="' . htmlspecialchars($item['name']) . '">Solicitar Cotización</a>';
-                    echo '</div>';
+                if ($result->num_rows > 0) {
+                    // Recorrer los resultados y mostrarlos
+                    while($item = $result->fetch_assoc()) {
+                        echo '<div class="furniture-item ' . htmlspecialchars($item['categoria']) . '">';
+                        echo '<img src="' . htmlspecialchars($item['imagen_url']) . '" alt="' . htmlspecialchars($item['nombre']) . '">';
+                        echo '<h3>' . htmlspecialchars($item['nombre']) . '</h3>';
+                        echo '<p>' . htmlspecialchars($item['descripcion']) . '</p>';
+                        echo '<div class="price">' . htmlspecialchars($item['precio_info']) . '</div>';
+                        echo '<a href="#" class="btn-more-info" data-name="' . htmlspecialchars($item['nombre']) . '">Solicitar Cotización</a>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo "<p>No hay productos de oficina disponibles en este momento.</p>";
                 }
+
+                // Cerrar la conexión a la base de datos
+                $conn->close();
                 ?>
             </div>
         </div>

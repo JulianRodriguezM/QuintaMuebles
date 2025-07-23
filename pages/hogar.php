@@ -27,48 +27,30 @@
 
             <div class="furniture-grid">
                 <?php
-                // Datos de ejemplo para productos del hogar
-                $home_furniture = [
-                    [
-                        'name' => 'Sofá Modular Confort',
-                        'image' => '../assets/images/sofa-modular.jpg', // Cambia por tus imágenes de hogar
-                        'description' => 'Sofá adaptable y cómodo, perfecto para cualquier sala de estar.',
-                        'category' => 'salas',
-                        'price_info' => 'Consultar precio'
-                    ],
-                    [
-                        'name' => 'Mesa de Comedor de Madera Maciza',
-                        'image' => '../assets/images/mesa-comedor.jpg', // Cambia por tus imágenes de hogar
-                        'description' => 'Elegante mesa de comedor para 6 personas, ideal para reuniones familiares.',
-                        'category' => 'comedores',
-                        'price_info' => 'Consultar precio'
-                    ],
-                    [
-                        'name' => 'Cama Queen Size con Cabecero Tapizado',
-                        'image' => '../assets/images/cama-queen.jpg', // Cambia por tus imágenes de hogar
-                        'description' => 'Cama moderna con cabecero suave y estructura robusta.',
-                        'category' => 'dormitorios',
-                        'price_info' => 'Consultar precio'
-                    ],
-                    [
-                        'name' => 'Mueble de Cocina Modular',
-                        'image' => '../assets/images/mueble-cocina.jpg', // Cambia por tus imágenes de hogar
-                        'description' => 'Solución de almacenamiento versátil para cocinas modernas.',
-                        'category' => 'cocinas',
-                        'price_info' => 'Consultar precio'
-                    ]
-                    // Añade más productos de hogar aquí
-                ];
+                // Incluir el archivo de conexión a la base de datos
+                include('../includes/db_conn.php');
 
-                foreach ($home_furniture as $item) {
-                    echo '<div class="furniture-item ' . htmlspecialchars($item['category']) . '">';
-                    echo '<img src="' . htmlspecialchars($item['image']) . '" alt="' . htmlspecialchars($item['name']) . '">';
-                    echo '<h3>' . htmlspecialchars($item['name']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($item['description']) . '</p>';
-                    echo '<div class="price">' . htmlspecialchars($item['price_info']) . '</div>';
-                    echo '<a href="#" class="btn-more-info" data-name="' . htmlspecialchars($item['name']) . '">Solicitar Cotización</a>';
-                    echo '</div>';
+                // Consulta para obtener productos de OFICINA
+                $sql = "SELECT nombre, descripcion, imagen_url, categoria, precio_info FROM productos WHERE tipo = 'hogar'";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Recorrer los resultados y mostrarlos
+                    while($item = $result->fetch_assoc()) {
+                        echo '<div class="furniture-item ' . htmlspecialchars($item['categoria']) . '">';
+                        echo '<img src="' . htmlspecialchars($item['imagen_url']) . '" alt="' . htmlspecialchars($item['nombre']) . '">';
+                        echo '<h3>' . htmlspecialchars($item['nombre']) . '</h3>';
+                        echo '<p>' . htmlspecialchars($item['descripcion']) . '</p>';
+                        echo '<div class="price">' . htmlspecialchars($item['precio_info']) . '</div>';
+                        echo '<a href="#" class="btn-more-info" data-name="' . htmlspecialchars($item['nombre']) . '">Solicitar Cotización</a>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo "<p>No hay productos de oficina disponibles en este momento.</p>";
                 }
+
+                // Cerrar la conexión a la base de datos
+                $conn->close();
                 ?>
             </div>
         </div>
