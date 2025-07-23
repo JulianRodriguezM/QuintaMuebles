@@ -1,2 +1,2 @@
 # Ignorar archivo de conexión a la base de datos
-includes/db_conn.php
+/includes/db_conn.php
